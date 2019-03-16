@@ -1,0 +1,8 @@
+com\techchefs\test\Application.class
+com\techchefs\test\service\StudentServiceImpl.class
+com\techchefs\test\repository\StudentRepository.class
+com\techchefs\test\controller\StudentController.class
+com\techchefs\test\service\StudentService.class
+com\techchefs\test\exception\NoSuchResourceFoundException.class
+com\techchefs\test\model\Student.class
+com\techchefs\test\exception\BadResourceRequestException.class
