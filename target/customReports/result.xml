@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.techchefs.test.HttpJsonDynamicUnitTest" time="0.658000" tests="2" errors="0" skipped="0" failures="2">
-    <testcase name="Get all models" classname="com.techchefs.test.HttpJsonDynamicUnitTest" time="0.602000">
+<testsuite name="com.techchefs.test.HttpJsonDynamicUnitTest" time="1.667000" tests="2" errors="0" skipped="0" failures="2">
+    <testcase name="Get all models" classname="com.techchefs.test.HttpJsonDynamicUnitTest" time="1.617000">
         <failure>
             Status code
         </failure>
     </testcase>
-    <testcase name="Delete model by id" classname="com.techchefs.test.HttpJsonDynamicUnitTest" time="0.056000">
+    <testcase name="Delete model by id" classname="com.techchefs.test.HttpJsonDynamicUnitTest" time="0.050000">
         <failure>
             Status code
         </failure>
