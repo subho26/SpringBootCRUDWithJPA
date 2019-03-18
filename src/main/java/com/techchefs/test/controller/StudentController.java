@@ -5,11 +5,10 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,20 +22,20 @@ public class StudentController {
 	@Qualifier(value="studentService")
 	private StudentService studentService;
 
-	@PostMapping(value = "/students", consumes = "application/json")
-	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = "/students", method = RequestMethod.POST, consumes = "application/json")
+    @ResponseStatus(HttpStatus.OK)
 	public Student createNewStudent(@RequestBody @Valid Student student) {
 		return studentService.createStudent(student);
 	}
 
-	@GetMapping(value = "/student/{id}")
-	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
 	public Student getStudentById(@PathVariable Long id) {
 		return studentService.getStudentById(id);
 	}
 
-	@DeleteMapping(value = "/student/{id}")
-	@ResponseStatus(HttpStatus.OK)
+	@RequestMapping(value = "/student/{id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
 	public void deleteStudentById(@PathVariable Long id) {
 		studentService.deleteByRollNumber(id);
 	}
